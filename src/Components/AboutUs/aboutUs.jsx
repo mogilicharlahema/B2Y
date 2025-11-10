@@ -11,7 +11,7 @@ import { FaBullseye, FaEye, FaHandshake } from "react-icons/fa";
 
 import image1 from "../../assets/Images/image1.jpg";
 import loudstier from "../../assets/Logos/loudstier.png";
-import mantralabs from "../../assets/Logos/mantralabs.svg";
+// import mantralabs from "../../assets/Logos/"
 import mcdmf from "../../assets/Logos/mcdmf.png";
 import sustaine from "../../assets/Logos/sustaine.png";
 import tri from "../../assets/Logos/tri.png";
@@ -169,16 +169,15 @@ const AboutUs = () => {
 
     <div className="aboutus-clients-slider">
       <div className="aboutus-clients-track">
-        {/* Repeat logos twice for infinite scrolling */}
+       
         <div className="client-logo"><img src={loudstier} alt="Loudstier" /></div>
-        <div className="client-logo"><img src={mantralabs} alt="Mantra Labs" /></div>
+        {/* <div className="client-logo"><img src={mantralabs} alt="Mantra Labs" /></div> */}
         <div className="client-logo"><img src={mcdmf} alt="MCDMF" /></div>
         <div className="client-logo"><img src={sustaine} alt="Sustaine" /></div>
         <div className="client-logo"><img src={tri} alt="TRI" /></div>
 
-        {/* Repeat for seamless loop */}
         <div className="client-logo"><img src={loudstier} alt="Loudstier" /></div>
-        <div className="client-logo"><img src={mantralabs} alt="Mantra Labs" /></div>
+        {/* <div className="client-logo"><img src={mantralabs} alt="Mantra Labs" /></div> */}
         <div className="client-logo"><img src={mcdmf} alt="MCDMF" /></div>
         <div className="client-logo"><img src={sustaine} alt="Sustaine" /></div>
         <div className="client-logo"><img src={tri} alt="TRI" /></div>
