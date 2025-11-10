@@ -1,0 +1,277 @@
+
+
+.services-section {
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 100px 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.services-container {
+  width: 100%;
+  max-width: 1200px;
+  background: var(--card-bg);
+  border-radius: 25px;
+  padding: 50px;
+  box-shadow: 0 0 25px var(--shadow-color);
+  transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+
+  /* Soft entry animation */
+  animation: floatIn 1.2s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover: make it pop and glow */
+.services-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 102, 255, 0.25),
+              0 8px 20px rgba(0, 102, 255, 0.15);
+}
+
+/* Animated glowing border effect */
+.services-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 25px;
+  border: 2px solid rgba(0, 102, 255, 0.25);
+  box-shadow: 0 0 30px rgba(0, 102, 255, 0.25);
+  opacity: 0.6;
+  animation: glowPulse 3s infinite alternate;
+  pointer-events: none;
+}
+
+/* Floating soft movement animation */
+@keyframes floatIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Subtle glowing pulse */
+@keyframes glowPulse {
+  from {
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.15);
+  }
+  to {
+    box-shadow: 0 0 45px rgba(0, 102, 255, 0.4);
+  }
+}
+
+
+
+.services-header {
+  text-align: left;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.services-header h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.services-header p {
+  color: color-mix(in srgb, var(--text-color) 70%, white);
+  max-width: 700px;
+  line-height: 1.5;
+  font-size: 1rem;
+  transition: color 0.4s ease;
+}
+
+.badge {
+  background: color-mix(in srgb, var(--primary-color) 10%, transparent);
+  color: var(--primary-color);
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 600;
+  border: none;
+  margin-bottom: 15px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.explore-btn {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.explore-btn:hover {
+  transform: translateY(-3px);
+  background: color-mix(in srgb, var(--primary-color) 85%, #fff);
+  color: #000;
+}
+
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.tab {
+  background: color-mix(in srgb, var(--primary-color) 8%, var(--card-bg));
+  color: var(--text-color);
+  border: 1px solid color-mix(in srgb, var(--primary-color) 25%, transparent);
+  padding: 14px 25px;
+  border-radius: 12px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab.active {
+  background: var(--primary-color);
+  color: #fff;
+  font-weight: 700;
+}
+
+.tab:hover {
+  transform: translateY(-2px);
+}
+
+
+.service-card {
+  background: var(--card-bg);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  gap: 40px;
+  flex-wrap: wrap;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 4px 25px var(--shadow-color);
+}
+
+.service-info {
+  flex: 1 1 400px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.service-info .icon {
+  background: color-mix(in srgb, var(--primary-color) 15%, transparent);
+  color: var(--primary-color);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  margin-bottom: 15px;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+.service-info h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: var(--text-color);
+  transition: color 0.4s ease;
+}
+
+.service-info p {
+  font-size: 1rem;
+  color: color-mix(in srgb, var(--text-color) 70%, white);
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.chat-btn {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.chat-btn:hover {
+  transform: translateY(-2px);
+  background: color-mix(in srgb, var(--primary-color) 80%, #fff);
+  color: #000;
+}
+
+.service-image {
+  flex: 1 1 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-image img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 24px var(--shadow-color);
+}
+
+.service-image img:hover {
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 992px) {
+  .service-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .services-header {
+    text-align: center;
+  }
+  .explore-btn {
+    position: relative;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-container {
+    padding: 30px;
+  }
+  .tab {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+}
