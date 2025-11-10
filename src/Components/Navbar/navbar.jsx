@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Navbar.css";
+import "./navbar.css";
 import b2ylogo from "../../assets/Logos/b2ylogo.png";
 import { Link } from "react-router-dom"; 
 
